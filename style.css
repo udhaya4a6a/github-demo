@@ -14,6 +14,10 @@ body {
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1__title {
@@ -28,12 +32,14 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    
 }
 
 .navbar__s2 input {
     border: none;
     width: 100%;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .navbar__s2 input:focus {
@@ -45,6 +51,30 @@ body {
     gap: 10px;
     align-items: center;
 }
+.My_Learning{
+    position: relative;
+    cursor: pointer;
+   
+    
+
+}
+.My_Learning__popup{
+    position: absolute;
+    background-color: white;
+    border: solid black 1px;
+    width: 100px;
+    top:150%;
+    right:0%;
+    padding:20px;
+    display: none;
+    
+
+}
+.My_Learning:hover .My_Learning__popup
+{
+    display: block;
+}
+
 
 .categories {
     display: flex;
@@ -53,16 +83,45 @@ body {
     justify-content: space-around;
 }
 
+
 .categories p {
     background-color: #a435f0;
     color: white;
     padding: 10px;
     border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.categories p:hover{
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .saleimage img {
     width: 100%;
     align-items: center;
+    position: relative;
+}
+.saleimage__offer{
+    position: absolute;
+    color: aqua;
+    bottom: 310px;
+    left:75px;
+    font-size: xx-large;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    
+}
+.saleimage__offer p{
+    text-align: center;
+}
+.saleimage__offer:hover{
+    box-shadow: 0 0 20px 5px #ff9800;
+  transition: 0.3s ease-in-out;
+  
+
+  
 }
 
 .recommended {
