@@ -90,10 +90,15 @@ body {
     padding: 10px;
     border-radius: 30px;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+
 }
 .categories p:hover{
     transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    color: #a435f0;
+  background-color: transparent ;
+  transition: 1s ease-in-out;
 }
 
 .saleimage img {
@@ -110,8 +115,20 @@ body {
     background-color: whitesmoke;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation-name: scaleAnimation;
+    animation-duration: 2.5s;
 
     
+}
+@keyframes scaleAnimation {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .saleimage__offer p{
     text-align: center;
